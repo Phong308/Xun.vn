@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <a href="https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh">
+    <img src="Ảnh1.png" alt="" style="width: 300px; border-radius: 50%;">
+</a>
+  <br>
+  <input style="width: 300px;" type="text" value="Tìm kiếm trên Wikipedia">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+ 
+  <nav>
+    <ul>
+      <li><a href="#section1">Trang chính</a></li>
+      <li><a href="#section2">Thảo luận</a></li>
+      <li><a href="#section3">Wikipedia:Cộng đồng</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="section1">
+      <h2>Trang chính</h2>
+      <table>
+        <tr>
+            <th>Sự kiện </th>
+            <th>Các mục chính</th>
+            <th>Mốc đánh dấu</th>
+          </tr>
+          <tr>
+            <td>Thay đổi gần đây</td>
+            <td>Nội dung chọn lọc</td>
+            <td>Giới thiệu Wikipedia</td>
+          </tr>
+          <tr>
+            <td>Cộng đồng</td>
+            <td>Bài biết ngẫu nhiên</td>
+            <td>Đóng góp</td>
+          </tr>
+      </table>
+      <p>Trang này là nơi thảo luận về dự án Wikipedia tiếng Việt. Một trong những trang liệt kê dưới đây có thể thích hợp hơn cho vấn đề của bạn:
+        <br>
+        Wikipedia:Tin nhắn cho bảo quản viên cho các bảo quản viên ở đây
+        <br>
+        Wikipedia:Giúp sử dụng Wikipedia cho những câu hỏi về Wikipedia
+        <br>
+        Wikipedia:Bàn tham khảo cho những câu hỏi có quan hệ đến lợi ích chung
+        <br>
+        Wikipedia:Bàn giải quyết mâu thuẫn cho những tranh chấp, mâu thuẫn cần cộng đồng tham gia giải quyết
+        <br>
+        Wikipedia:Biểu quyết để cộng đồng biểu quyết sau khi đã thảo luận thấu đáo nhưng không đạt đồng thuận</p>
+    </section>
+    
+    <section id="section2">
+      <h2>Thảo luận</h2>
+      <table>
+       
+        <tr>
+            <th>Bài viết chọn lọc</th>
+            <th>Bài viết tốt</th>
+            <th>Danh sách chọn lọc</th>
+          </tr>
+          <tr>
+            <td>Làm thế nào để nhanh giàu</td>
+            <td>Tiếp thu nhanh như thế nào</td>
+            <td>Nên tránh những điều gì</td>
+          </tr>
+          <tr>
+            <td>Cách khắc phục mất học lập trình</td>
+            <td>Kiềm chế cảm xúc</td>
+            <td>Phát triển bản thân</td>
+          </tr>
+      </table>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam turpis vel sodales consectetur. Ut dignissim posuere commodo. Fusce eget tortor vitae nisl tristique suscipit. Proin nec aliquet dui. Aliquam tempus vestibulum interdum. Integer feugiat bibendum faucibus. Donec id pulvinar elit.</p>
+    </section>
+    
+    <section id="section3">
+      <h2>Wikipedia:Cộng đồng</h2>
+      <table>
+        <tr>
+          <th>Cổng thông tin của cộng đồng Wikipedia! </th>
+          <th>Hướng dẫn dành cho người mới  </th>
+          <th>Cải thiện nội dung </th>
+        </tr>
+        <tr>
+          <td>Quy định cần biết </td>
+          <td>Sách hướng dẫn</td>
+          <td>Cải thiện bài viết</td>
+        </tr>
+        <tr>
+          <td>Trang chức năng </td>
+          <td>Liên kết ngoài</td>
+          <td>Cộng tác với các thành viên khác để biên tập bài</td>
+        </tr>
+      </table>
+      <p>Trang này được sửa đổi lần cuối vào ngày 7 tháng 1 năm 2023, 21:52.
+        Văn bản được phát hành theo Giấy phép Creative Commons Ghi công–Chia sẻ tương tự; có thể áp dụng điều khoản bổ sung. Với việc sử dụng trang web này, bạn chấp nhận Điều khoản Sử dụng và Quy định quyền riêng tư. Wikipedia® là thương hiệu đã đăng ký của Wikimedia Foundation, Inc., một tổ chức phi lợi nhuận.</p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Wikipedia. All rights reserved.</p>
+  </footer>
+</body>
+</html>
