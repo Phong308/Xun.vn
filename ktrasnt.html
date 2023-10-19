@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <h1>Prime Numbers Below 10,000</h1>
+    <ul id="primeList"></ul>
+
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+            if (number <= 3) {
+                return true;
+            }
+            if (number % 2 === 0 || number % 3 === 0) {
+                return false;
+            }
+            for (let i = 5; i * i <= number; i += 6) {
+                if (number % i === 0 || number % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function findPrimesBelow10000() {
+            let primes = [];
+            for (let i = 2; i < 10000; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+            return primes;
+        }
+
+        const primeNumbers = findPrimesBelow10000();
+        const primeList = document.getElementById("primeList");
+
+        primeNumbers.forEach(number => {
+            const listItem = document.createElement("li");
+            listItem.textContent = number;
+            primeList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
