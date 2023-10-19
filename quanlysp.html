@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        table, th, td {
+            border: none;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản Lý Sản Phẩm</h1>
+    <br>
+    <br>
+
+
+    <div>
+        <input style="width: 250px; height: 25px;" type="text" id="productName" placeholder="New Product">
+        <button style="background-color: aqua ; width: 50px; height: 30px; " onclick="addProduct()">Add</button>
+    </div>
+    <br>
+    <br>
+
+
+    <h3>Display All Product</h3>
+    <br>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th></th>
+                
+                <th style="color: red;">9 product </th>
+            </tr>
+            <tr>
+                <td>Sony Xperia</td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Samsung Galaxy</td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Nokia 6  </td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Xiaomi Redmi Note 4</td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Apple iPhone 6S </td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Xiaomi Mi 5s Plus  </td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Apple iPhone 8 Plus </td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Fujitsu F-04E</td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Oppo A71</td>
+                <td>
+                    <button style="background-color: aqua;">Edit</button>
+                </td>
+                <td>
+                    <button style="background-color: aqua;">Delete</button>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody id="productList">
+        </tbody>
+       
+    </table>
+    <h3>Lê Bật Phong</h3>
+
+
+    <script>
+        const productList = document.getElementById('productList');
+
+        function addProduct() {
+            const productNameInput = document.getElementById('productName');
+            const productName = productNameInput.value.trim();
+
+            if (productName !== "") {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${productName}</td>
+                    <td>
+                        <button style="background-color: aqua;" onclick="editProduct(this)">Edit</button>
+                    </td>
+                    <td>
+                        <button style="background-color: aqua;" onclick="deleteProduct(this)">Delete</button>
+                    </td>
+                `;
+                productList.appendChild(row);
+                productNameInput.value = '';
+            }
+        }
+
+        function editProduct(button) {
+            const row = button.parentNode.parentNode;
+            const productName = row.querySelector('td:first-child').textContent;
+            const newName = prompt('Sửa tên sản phẩm:', productName);
+
+            if (newName !== null) {
+                row.querySelector('td:first-child').textContent = newName;
+            }
+        }
+
+        function deleteProduct(button) {
+            const row = button.parentNode.parentNode;
+            productList.removeChild(row);
+        }
+    </script>
+</body>
+</html>
