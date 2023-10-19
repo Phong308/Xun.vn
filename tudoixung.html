@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+
+    <label for="inputWord">Enter a word:</label>
+    <input type="text" id="inputWord">
+    <button onclick="checkPalindrome()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function isPalindrome(s) {
+            function checkPalindrome(str) {
+                if (str.length <= 1) {
+                    return true;
+                }
+
+                if (str[0] !== str[str.length - 1]) {
+                    return false;
+                }
+
+                return checkPalindrome(str.slice(1, str.length - 1));
+            }
+
+            const cleanedString = s.replace(/[^a-zA-Z]/g, '').toLowerCase();
+            return checkPalindrome(cleanedString);
+        }
+
+        function checkPalindrome() {
+            const inputElement = document.getElementById("inputWord");
+            const resultElement = document.getElementById("result");
+            const inputString = inputElement.value;
+
+            if (isPalindrome(inputString)) {
+                resultElement.textContent = `"${inputString}" is a palindrome.`;
+            } else {
+                resultElement.textContent = `"${inputString}" is not a palindrome.`;
+            }
+        }
+    </script>
+</body>
+</html>
