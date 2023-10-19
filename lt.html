@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise Solutions</title>
+</head>
+<body>
+    <h1>Exercise Solutions</h1>
+
+    <script>
+        // Bài 1
+        function compareAndAdd(a, b) {
+            if (a > b) {
+                alert("Tham số thứ nhất lớn hơn tham số thứ hai.");
+            } else {
+                return a + b;
+            }
+        }
+
+        // Bài 2
+        function findConstellation(starName) {
+            const starNames = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            const constellationNames = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+            for (let i = 0; i < starNames.length; i++) {
+                if (starNames[i] === starName) {
+                    return constellationNames[i];
+                }
+            }
+
+            return "Không tìm thấy ngôi sao này trong danh sách.";
+        }
+
+        // Bài 3
+        function square(number) {
+            return number * number;
+        }
+
+        // Bài 4
+        function calculateCircleArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        function calculateCircleCircumference(radius) {
+            return 2 * Math.PI * radius;
+        }
+
+        // Bài 5
+        function factorial(number) {
+            if (number === 0 || number === 1) {
+                return 1;
+            } else {
+                return number * factorial(number - 1);
+            }
+        }
+
+        // Bài 6
+        function isDigit(character) {
+            return !isNaN(character);
+        }
+
+        // Bài 7
+        function findMinOfThree(a, b, c) {
+            return Math.min(a, b, c);
+        }
+
+        // Bài 8
+        function isPositiveInteger(number) {
+            return number > 0;
+        }
+
+        // Bài 9
+        function reverseArray(arr) {
+            return arr.reverse();
+        }
+
+        // Bài 10
+        function countCharacterInArray(array, character) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === character) {
+                    count++;
+                }
+            }
+            return count === 0 ? -1 : count;
+        }
+
+        // Để sử dụng các hàm, gọi và hiển thị kết quả tại đây
+        const result1 = compareAndAdd(5, 10);
+        console.log("Bài 1 Result: " + result1);
+
+        const result2 = findConstellation("Vega");
+        console.log("Bài 2 Result: " + result2);
+
+        const result3 = square(4);
+        console.log("Bài 3 Result: " + result3);
+
+        const area = calculateCircleArea(5);
+        const circumference = calculateCircleCircumference(5);
+        console.log("Bài 4 - Circle Area: " + area + ", Circumference: " + circumference);
+
+        const result5 = factorial(5);
+        console.log("Bài 5 Result: " + result5);
+
+        const result6 = isDigit("7");
+        console.log("Bài 6 Result: " + result6);
+
+        const result7 = findMinOfThree(8, 4, 10);
+        console.log("Bài 7 Result: " + result7);
+
+        const result8 = isPositiveInteger(-3);
+        console.log("Bài 8 Result: " + result8);
+
+        const arrayToReverse = [1, 2, 3, 4, 5];
+        const reversedArray = reverseArray(arrayToReverse);
+        console.log("Bài 9 - Reversed Array: " + reversedArray);
+
+        const arrayToSearch = ['a', 'b', 'c', 'a', 'd', 'e', 'f'];
+        const result10 = countCharacterInArray(arrayToSearch, 'a');
+        console.log("Bài 10 Result: " + result10);
+    </script>
+</body>
+</html>
