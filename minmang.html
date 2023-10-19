@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimum Value in an Array</title>
+</head>
+<body>
+
+<script>
+    function minArrayIndex(arr) {
+        if (arr.length === 0) {
+            return -1; // Mảng rỗng, trả về -1.
+        }
+
+        let min = arr[0];
+        let minIndex = 0;
+
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                minIndex = i; // Cập nhật vị trí của phần tử nhỏ nhất.
+            }
+        }
+
+        return minIndex;
+    }
+
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let minIndex1 = minArrayIndex(arr1);
+    alert("Minimum value in arr1 is at index " + minIndex1);
+
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let minIndex2 = minArrayIndex(arr2);
+    alert("Minimum value in arr2 is at index " + minIndex2);
+
+    let arr3 = [];
+    let minIndex3 = minArrayIndex(arr3);
+    alert("Minimum value in arr3 is at index " + minIndex3);
+
+    let arr4 = [0, 0, 0, 0, 0, 0];
+    let minIndex4 = minArrayIndex(arr4);
+    alert("Minimum value in arr4 is at index " + minIndex4);
+</script>
+
+</body>
+</html>
