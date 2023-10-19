@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet to Meters and Meters to Feet Converter</title>
+</head>
+<body>
+    <h1>Feet to Meters and Meters to Feet Converter</h1>
+    
+    <form>
+        <label for="feet">Feet:</label>
+        <input type="number" id="feet" placeholder="Enter feet" oninput="convertFeetToMeters(this.value)">
+        <span id="metersResult"></span> meters
+    </form>
+
+    <form>
+        <label for="meters">Meters:</label>
+        <input type="number" id="meters" placeholder="Enter meters" oninput="convertMetersToFeet(this.value)">
+        <span id="feetResult"></span> feet
+    </form>
+
+    <script>
+        function convertFeetToMeters(feet) {
+            let meters = 0.305 * feet;
+            document.getElementById("metersResult").textContent = meters.toFixed(2);
+        }
+
+        function convertMetersToFeet(meters) {
+            let feet = 3.279 * meters;
+            document.getElementById("feetResult").textContent = feet.toFixed(2);
+        }
+    </script>
+</body>
+</html>
